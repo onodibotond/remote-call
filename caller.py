@@ -5,12 +5,10 @@ from win32 import win32gui
 import win32con, win32console
 
 if RESIZE_WINDOW:
-	print("HERE")
 	os.system("mode con cols=" + COLUMN_NUMBER)
 	os.system("mode con lines=" + LINESS_NUMBER)
 
 if KEEP_IN_FRONT:
-	print("HERE")
 	hWnd=int(win32console.GetConsoleWindow())
 	win32gui.SetWindowPos(hWnd, win32con.HWND_TOPMOST, 0,0,0,0, win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
 
@@ -31,11 +29,11 @@ if device == '':
 	exit()
 
 while (True):
-	#os.system('cls')
+	os.system('cls')
 	number = input(TEXT + ": ")
 	number = number.replace(" ","")
 
 	if number:
 		print("Calling: " + number)
-		#LOG: print(adb + "-s \"" + device + "\" shell am start -a android.intent.action.CALL -d tel:\"" + number + "\"")
+		#LOG to be done: print(adb + "-s \"" + device + "\" shell am start -a android.intent.action.CALL -d tel:\"" + number + "\"")
 		stream = os.popen(adb + " -s \"" + device + "\" shell am start -a android.intent.action.CALL -d tel:\"" + number + "\"")
