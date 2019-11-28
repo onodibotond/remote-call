@@ -1,0 +1,1 @@
+C:\Python37\python.exe C:\platform-tools\direct.py "%1"
