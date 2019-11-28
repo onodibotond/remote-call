@@ -1,1 +1,1 @@
-C:\Python37\python.exe C:\platform-tools\direct.py "%1"
+C:\Python36\python.exe C:\remote-call\direct.py "%1"
